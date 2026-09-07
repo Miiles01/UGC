@@ -27,6 +27,7 @@ export const PortfolioSmoothScroll = ({
     });
 
     lenisRef.current = lenis;
+    (window as any).lenis = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -38,6 +39,7 @@ export const PortfolioSmoothScroll = ({
 
     return () => {
       lenis.destroy();
+      delete (window as any).lenis;
       gsap.ticker.remove(lenis.raf as any);
     };
   }, []);
