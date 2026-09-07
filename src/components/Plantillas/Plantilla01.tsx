@@ -664,7 +664,7 @@ export const Plantilla01: React.FC = () => {
             </section>
 
             {/* Portfolio Gallery GSAP (Light) */}
-            <section className="theme-section mwg_effect037 w-full -mx-6 md:-mx-12 lg:-mx-24 px-6 md:px-12 lg:px-24 relative" data-theme="light">
+            <section className="theme-section mwg_effect037 w-full relative" data-theme="light">
               <style>{`
                   .mwg_effect037 .pin-height {
                       height: 500vh;
@@ -681,14 +681,19 @@ export const Plantilla01: React.FC = () => {
                   
                   .mwg_effect037 .text-side {
                       font-weight: 300;
-                      font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+                      font-size: clamp(2rem, 4vw, 3.5rem);
                       letter-spacing: -0.05em;
                       line-height: 1.1;
                       z-index: 10;
                       position: absolute;
                       top: 50%;
                       transform: translateY(-50%);
-                      width: 30%;
+                      width: 45%;
+                  }
+                  @media (min-width: 768px) {
+                      .mwg_effect037 .text-side {
+                          width: 30%;
+                      }
                   }
                   .mwg_effect037 .text-side.text-left {
                       left: 0;
