@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, Instagram, Twitter, Mail, Play, X } from 'lucide-react';
-import { FoodIcon } from '../Icons/FoodIcon';
 import { PortfolioSmoothScroll } from '../Portfolio/PortfolioSmoothScroll';
 import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
@@ -632,7 +631,7 @@ export const Plantilla01: React.FC = () => {
                       ].map((src, i) => (
                           <div key={i} className="snap-center shrink-0 w-[75vw] aspect-[9/16] relative rounded-2xl overflow-hidden bg-neutral-900 transition-colors duration-1000">
                               <img className="w-full h-full object-cover opacity-80" src={src} alt={`Reel ${i + 1}`} />
-                              <FoodIcon className="w-12 h-12 text-white/80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                              <Play className="w-12 h-12 text-white/50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                           </div>
                       ))}
                   </div>
