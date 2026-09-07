@@ -31,6 +31,7 @@ export const Plantilla01: React.FC = () => {
                 pin: true,
                 animation: gsap.to(zoomLayers, {
                     scale: 1.01,
+                    duration: 4, // Crucial for "picture-in-picture" overlap. Animation takes 4x longer than the stagger gap.
                     ease: 'expo.inOut', // Tutorial exactly uses expo.inOut for that delicate slow-fast-slow curve
                     stagger: 1
                 }),
@@ -389,63 +390,6 @@ export const Plantilla01: React.FC = () => {
     <PortfolioSmoothScroll>
       <div className={`${theme}`}>
         <div className="min-h-screen bg-white dark:bg-[#08080a] text-black dark:text-white font-dmsans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
-          
-          {/* Floating Navbar */}
-          <nav className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center pointer-events-none">
-            <div className="pointer-events-auto text-black dark:text-white transition-colors duration-1000">
-              <span className="text-xl font-medium tracking-tight">Laura.</span>
-            </div>
-            
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="pointer-events-auto w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 backdrop-blur-md flex items-center justify-center hover:scale-105 transition-all duration-1000 text-black dark:text-white z-[60]"
-            >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </nav>
-
-          {/* Menu Overlay */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="fixed top-20 right-6 left-6 md:left-auto md:w-72 bg-white/90 dark:bg-black/90 backdrop-blur-2xl border border-black/5 dark:border-white/10 rounded-3xl p-8 shadow-2xl z-50 flex flex-col gap-6"
-              >
-                <div className="flex flex-col gap-4">
-                  <p className="text-xs font-semibold tracking-widest text-black/40 dark:text-white/40 mb-2">Menú</p>
-                  {navLinks.map((link, i) => (
-                    <motion.a
-                      key={link.id}
-                      href={`#${link.id}`}
-                      onClick={(e) => handleScroll(e, link.id)}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 + i * 0.05 }}
-                      className="text-3xl font-light hover:translate-x-2 transition-transform duration-300 inline-block"
-                    >
-                      {link.name}
-                    </motion.a>
-                  ))}
-                </div>
-                <div className="mt-4 pt-2 flex flex-col gap-6">
-                  <a href="mailto:hola@lauracreativa.com" className="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity">
-                    hola@lauracreativa.com
-                  </a>
-                  <div className="flex gap-4">
-                    <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
-                      <Twitter className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
 
                       {/* Hero GSAP Effect 050 (Finite Scroll Zoom) */}
             <section className="theme-section mwg_effect050 w-full relative" data-theme="light">
@@ -838,7 +782,65 @@ export const Plantilla01: React.FC = () => {
 
           </main>
 
-          {/* Footer CTA (Dark) */}
+          
+          
+          {/* Floating Navbar */}
+          <nav className="fixed top-0 left-0 right-0 z-[100] p-6 flex justify-between items-center pointer-events-none">
+            <div className="pointer-events-auto text-black dark:text-white transition-colors duration-1000">
+              <span className="text-xl font-medium tracking-tight">Laura.</span>
+            </div>
+            
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="pointer-events-auto w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 backdrop-blur-md flex items-center justify-center hover:scale-105 transition-all duration-1000 text-black dark:text-white z-[110]"
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </nav>
+
+          {/* Menu Overlay */}
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="fixed top-20 right-6 left-6 md:left-auto md:w-72 bg-white/90 dark:bg-black/90 backdrop-blur-2xl border border-black/5 dark:border-white/10 rounded-3xl p-8 shadow-2xl z-[100] flex flex-col gap-6"
+              >
+                <div className="flex flex-col gap-4">
+                  <p className="text-xs font-semibold tracking-widest text-black/40 dark:text-white/40 mb-2">Menú</p>
+                  {navLinks.map((link, i) => (
+                    <motion.a
+                      key={link.id}
+                      href={`#${link.id}`}
+                      onClick={(e) => handleScroll(e, link.id)}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + i * 0.05 }}
+                      className="text-3xl font-light hover:translate-x-2 transition-transform duration-300 inline-block"
+                    >
+                      {link.name}
+                    </motion.a>
+                  ))}
+                </div>
+                <div className="mt-4 pt-2 flex flex-col gap-6">
+                  <a href="mailto:hola@lauracreativa.com" className="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity">
+                    hola@lauracreativa.com
+                  </a>
+                  <div className="flex gap-4">
+                    <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+{/* Footer CTA (Dark) */}
           <footer id="contacto" className="theme-section text-black dark:text-white py-32 px-6 md:px-12 mt-32 transition-colors duration-1000" data-theme="dark">
             <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-10">
               <h2 className="animated-title text-5xl md:text-7xl lg:text-8xl tracking-tighter font-light"
