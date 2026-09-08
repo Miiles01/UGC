@@ -845,7 +845,7 @@ const testimonials = [
                           <div className="hidden-mask"><img className="media-img" src="/creadora/opt_replace.jpeg" alt="Dirección Creativa 3" /></div>
                       </div>
                       
-                      <p className="text-side text-right">Visión<br/><span className="font-semibold">Auténtica</span></p>
+                      <p className="text-side text-right">Crear con<br/><span className="font-semibold">intención</span></p>
                   </div>
               </div>
             </section>
