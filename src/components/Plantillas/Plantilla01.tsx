@@ -6,10 +6,10 @@ import { PortfolioSmoothScroll } from '../Portfolio/PortfolioSmoothScroll';
 import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
+import SplitType from "split-type";
 import { Observer } from "gsap/Observer";
 
-gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
+gsap.registerPlugin(ScrollTrigger, Observer);
 
 export const Plantilla01: React.FC = () => {
 const reelMedia = [
@@ -397,7 +397,7 @@ const testimonials = [
     const titles = gsap.utils.toArray('.animated-title');
     titles.forEach((title) => {
       // Split into lines to create the mask wrappers, and chars for the animation
-      const split = new SplitText(title, { type: 'lines, chars' });
+      const split = new SplitType(title as HTMLElement, { types: 'lines, chars' });
       
       // The user's requested clipPath technique applied to each line so it works with multiline text
       gsap.set(split.lines, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' });
