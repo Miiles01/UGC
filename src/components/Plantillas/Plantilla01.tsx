@@ -672,11 +672,11 @@ const testimonials = [
                       <div className="container-pin">
                           
                           {reelMedia.map((item, i) => (
-                              <div key={i} className="circle bg-black/20 rounded-3xl overflow-hidden shadow-2xl">
+                              <div key={i} className="circle">
                                   {item.type === 'video' ? (
-                                    <video className="media" src={item.src} autoPlay loop muted playsInline />
+                                    <video className="media bg-black/20 shadow-2xl" src={item.src} autoPlay loop muted playsInline />
                                   ) : (
-                                    <img className="media" src={item.src} alt={`Reel ${i + 1}`} />
+                                    <img className="media bg-black/20 shadow-2xl" src={item.src} alt={`Reel ${i + 1}`} />
                                   )}
                               </div>
                           ))}
