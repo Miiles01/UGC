@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, Instagram, Twitter, Mail, Play, X } from 'lucide-react';
+import { Menu, Instagram, Twitter, Mail, Play, X, Facebook } from 'lucide-react';
+import { Tiktok } from '../Icons/Tiktok';
 import { PortfolioSmoothScroll } from '../Portfolio/PortfolioSmoothScroll';
 import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
@@ -840,6 +841,12 @@ export const Plantilla01: React.FC = () => {
                     <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
                       <Twitter className="w-5 h-5" />
                     </a>
+                    <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+                      <Tiktok className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="p-3 bg-black/5 dark:bg-white/5 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+                      <Facebook className="w-5 h-5" />
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -871,6 +878,12 @@ export const Plantilla01: React.FC = () => {
                   </a>
                   <a href="#" className="hover:opacity-100 transition-opacity flex items-center gap-2">
                     <Twitter className="w-4 h-4" /> Twitter
+                  </a>
+                  <a href="#" className="hover:opacity-100 transition-opacity flex items-center gap-2">
+                    <Tiktok className="w-4 h-4" /> TikTok
+                  </a>
+                  <a href="#" className="hover:opacity-100 transition-opacity flex items-center gap-2">
+                    <Facebook className="w-4 h-4" /> Facebook
                   </a>
                 </div>
               </div>
