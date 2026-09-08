@@ -502,7 +502,7 @@ const testimonials = [
       {/* Intro Curtain Loader */}
       <div className="intro-curtain fixed inset-0 z-[10000] bg-white flex items-center justify-center">
         <div className="overflow-hidden">
-          <p className="intro-text text-xl md:text-2xl tracking-[0.3em] font-medium text-black uppercase transform translate-y-full">Portafolio</p>
+          <p className="intro-text text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] font-medium text-black uppercase transform translate-y-full">Portafolio</p>
         </div>
       </div>
 
