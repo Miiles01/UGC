@@ -665,27 +665,27 @@ const testimonials = [
             </section>
 
             {/* Clients / Brands (Light) */}
-            <section id="clientes" className="theme-section flex flex-col gap-16 items-center text-center" data-theme="light">
-              <h2 className="animated-title text-3xl md:text-5xl font-light tracking-tight transition-colors duration-1000"
+            <section id="clientes" className="theme-section flex flex-col gap-16 items-center text-center text-black" data-theme="light">
+              <h2 className="animated-title text-3xl md:text-5xl font-light tracking-tight text-black transition-colors duration-1000"
               >
                 Marcas que <span className="font-semibold text-4xl md:text-6xl">confían</span>
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 md:gap-16 place-items-center w-full max-w-4xl mx-auto">
-                <img src="/collabs/adidas-13.svg" alt="adidas-13" className="h-16 md:h-24 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/chanel-2.svg" alt="chanel-2" className="h-14 md:h-20 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/dji-1.svg" alt="dji-1" className="h-12 md:h-16 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/loreal.svg" alt="loreal" className="h-6 md:h-8 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/la-roche-posay.svg" alt="la-roche-posay" className="h-8 md:h-12 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/samsung-8.svg" alt="samsung-8" className="h-10 md:h-14 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/spotify-logo.svg" alt="spotify-logo" className="h-10 md:h-14 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/vichy-laboratoires.svg" alt="vichy-laboratoires" className="h-16 md:h-24 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/zoah-1.svg" alt="zoah-1" className="h-12 md:h-16 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/zara.svg" alt="zara" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/vogue.svg" alt="vogue" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/versace.svg" alt="versace" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/pull-bear-2.svg" alt="pull-bear-2" className="h-6 md:h-8 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/bershka-1.svg" alt="bershka-1" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
-                <img src="/collabs/shein.svg" alt="shein" className="hidden md:block h-6 md:h-10 w-auto object-contain brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/adidas-13.svg" alt="adidas-13" className="h-16 md:h-24 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/chanel-2.svg" alt="chanel-2" className="h-14 md:h-20 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/dji-1.svg" alt="dji-1" className="h-12 md:h-16 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/loreal.svg" alt="loreal" className="h-6 md:h-8 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/la-roche-posay.svg" alt="la-roche-posay" className="h-8 md:h-12 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/samsung-8.svg" alt="samsung-8" className="h-10 md:h-14 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/spotify-logo.svg" alt="spotify-logo" className="h-10 md:h-14 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/vichy-laboratoires.svg" alt="vichy-laboratoires" className="h-16 md:h-24 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/zoah-1.svg" alt="zoah-1" className="h-12 md:h-16 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/zara.svg" alt="zara" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/vogue.svg" alt="vogue" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/versace.svg" alt="versace" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/pull-bear-2.svg" alt="pull-bear-2" className="h-6 md:h-8 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/bershka-1.svg" alt="bershka-1" className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
+                <img src="/collabs/shein.svg" alt="shein" className="hidden md:block h-6 md:h-10 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
               </div>
             </section>
 
