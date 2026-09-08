@@ -459,7 +459,7 @@ const testimonials = [
   return (
     <PortfolioSmoothScroll>
       <div className={`${theme}`}>
-        <div className="min-h-screen bg-white dark:bg-[#476500] text-black dark:text-white font-dmsans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
+        <div className="min-h-screen overflow-x-hidden bg-white dark:bg-[#476500] text-black dark:text-white font-dmsans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
 
                       {/* Hero GSAP Effect 050 (Finite Scroll Zoom) */}
             <section className="theme-section mwg_effect050 w-full relative" data-theme="light">
@@ -839,7 +839,7 @@ const testimonials = [
             </section>
 
                         {/* Testimonials Auto Carousel (Dark) */}
-            <section className="theme-section flex flex-col gap-12 overflow-hidden py-10" data-theme="dark">
+            <section className="theme-section flex flex-col gap-12 py-10" data-theme="dark">
               <style>{`
                 @keyframes marquee {
                   0% { transform: translateX(0%); }
