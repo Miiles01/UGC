@@ -479,9 +479,8 @@ const testimonials = [
             <section id="sobre-mi" className="theme-section flex flex-col gap-8 w-full" data-theme="light">
               <div className="flex flex-col items-center md:items-start mb-8 md:mb-16 w-full">
                 <h1 className="animated-title text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-tight text-black dark:text-white transition-colors duration-1000">
-                  Soy Laura,<br />
-                  creadora de<br />
-                  historias
+                  Mi misión<br />
+                  es conectar
                 </h1>
               </div>
               
