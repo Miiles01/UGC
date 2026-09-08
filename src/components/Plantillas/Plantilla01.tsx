@@ -790,14 +790,14 @@ export const Plantilla01: React.FC = () => {
           
           
           {/* Floating Navbar */}
-          <nav className="fixed top-0 left-0 right-0 z-[100] p-6 flex justify-between items-center pointer-events-none">
-            <div className="pointer-events-auto text-white mix-blend-difference">
+          <nav className="fixed top-0 left-0 right-0 z-[100] p-6 flex justify-between items-center pointer-events-none mix-blend-difference text-white">
+            <div className="pointer-events-auto">
               <span className="text-xl font-medium tracking-tight">Laura.</span>
             </div>
             
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 transition-transform text-white mix-blend-difference z-[110]"
+              className="pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 transition-transform"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
