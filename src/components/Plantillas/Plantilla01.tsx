@@ -591,9 +591,18 @@ const testimonials = [
                     height: 506px;
                     overflow: hidden;
                     background-color: #f3f4f6;
+                    transition: background-color 0.4s ease;
                 }
                 :global(.dark) .mwg_effect109 .slide {
                     background-color: #171717;
+                }
+                .mwg_effect109 .slide.on {
+                    background-color: #476500 !important;
+                }
+                .mwg_effect109 .slide.on p,
+                .mwg_effect109 .slide.on div,
+                .mwg_effect109 .slide.on svg {
+                    color: white !important;
                 }
                 .mwg_effect109 .slide:not(.on) {
                     cursor: pointer;
