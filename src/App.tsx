@@ -22,7 +22,7 @@ export const App: React.FC = () => {
             <Route path="/trabajo/:slug" element={<ProjectDetail />} />
             <Route path="/brief/:slug" element={<BriefRunner />} />
             <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/plantilla-01" element={<Plantilla01 />} />
+            <Route path="/laura" element={<Plantilla01 />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
