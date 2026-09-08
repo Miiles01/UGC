@@ -889,7 +889,7 @@ const testimonials = [
           
           
           {/* Floating Navbar */}
-          <nav className="fixed top-0 left-0 right-0 z-[100] p-6 flex justify-between items-center pointer-events-none mix-blend-difference text-white">
+          <nav className="fixed top-0 left-0 right-0 z-[100] p-6 flex justify-between items-center pointer-events-none text-white">
             <div className="pointer-events-auto">
               <span className="text-xl font-medium tracking-tight">Laura.</span>
             </div>
@@ -910,10 +910,10 @@ const testimonials = [
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="fixed top-20 right-6 left-6 md:left-auto md:w-72 bg-white/90 dark:bg-black/90 backdrop-blur-2xl border border-black/5 dark:border-white/10 rounded-3xl p-8 shadow-2xl z-[100] flex flex-col gap-6"
+                className="fixed top-20 right-6 left-6 md:left-auto md:w-72 bg-white/90 backdrop-blur-2xl border border-black/5 rounded-3xl p-8 shadow-2xl z-[100] flex flex-col gap-6 text-black"
               >
                 <div className="flex flex-col gap-4">
-                  <p className="text-xs font-semibold tracking-widest text-black/40 dark:text-white/40 mb-2">Menú</p>
+                  <p className="text-xs font-semibold tracking-widest text-black/40 mb-2">Menú</p>
                   {navLinks.map((link, i) => (
                     <motion.a
                       key={link.id}
