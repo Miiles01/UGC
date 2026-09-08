@@ -89,7 +89,7 @@ const testimonials = [
             ScrollTrigger.create({
                 trigger: container,
                 start: 'top top',
-                end: '+=400%', // 4 images to zoom through (total 5 images)
+                end: '+=200%', // 2 zoom layers (total 3 images)
                 pin: true,
                 animation: gsap.to(zoomLayers, {
                     scale: 1.01,
@@ -468,9 +468,7 @@ const testimonials = [
                       <h2 className="font-bold tracking-tighter" style={{ fontSize: 'clamp(120px, 35vw, 600px)', color: '#344804', lineHeight: 1 }}>UGC</h2>
                     </div>
                     <img src="/hero/3.jpeg" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
-                    <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 4, transform: 'scale(0)'}} alt="Hero 4" />
-                    <img src="https://images.unsplash.com/photo-1534126511673-b6899657816a?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 5, transform: 'scale(0)'}} alt="Hero 5" />
-                </div>
+                                                        </div>
             </section>
 
           <main className="px-6 md:px-12 lg:px-24 pt-32 pb-24 max-w-7xl mx-auto flex flex-col gap-48 md:gap-64">
