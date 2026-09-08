@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'Manrope', 'system-ui', 'sans-serif'],
         dmsans: ['"DM Sans"', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
         welth: ['WelthCatritz', 'Welth Catritz', 'serif'],
         editorial: ['WelthCatritz', 'Welth Catritz', 'serif'],
       },

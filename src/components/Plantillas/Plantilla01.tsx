@@ -376,6 +376,9 @@ const testimonials = [
         stagger: { 
           each: 0.05, 
           from: "random" 
+        },
+        onComplete: () => {
+          gsap.set(split.lines, { clearProps: 'clipPath' });
         }
       });
     });
@@ -420,7 +423,7 @@ const testimonials = [
   return (
     <PortfolioSmoothScroll>
       <div className={`${theme}`}>
-        <div className="min-h-screen overflow-x-hidden bg-white dark:bg-[#476500] text-black dark:text-white font-dmsans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
+        <div className="min-h-screen overflow-x-hidden bg-white dark:bg-[#476500] text-black dark:text-white font-manrope selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
 
                       {/* Hero GSAP Effect 050 (Finite Scroll Zoom) */}
             <section className="theme-section mwg_effect050 w-full relative" data-theme="light">
@@ -455,14 +458,14 @@ const testimonials = [
                     <div className="real-image flex flex-col justify-between px-6 md:px-12 lg:px-24 py-8 md:py-4" style={{zIndex: 1, transform: 'scale(1)'}}>
                       <img src="/hero/1.jpeg" className="absolute inset-0 w-full h-full object-cover -z-10" alt="Hero 1 Background" />
                       <div className="w-full flex justify-start pt-24 md:pt-4">
-                        <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Soy</h2>
+                        <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-tight font-bold tracking-tighter text-white">Soy</h2>
                       </div>
                       <div className="w-full flex justify-end pb-8 md:pb-4">
-                        <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Laura</h2>
+                        <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-tight font-bold tracking-tighter text-white">Laura</h2>
                       </div>
                     </div>
                     <div className="real-image zoom-layer flex items-center justify-center bg-[#476500]" style={{zIndex: 2, transform: 'scale(0)'}}>
-                      <h2 className="font-bold tracking-tighter" style={{ fontSize: 'clamp(120px, 35vw, 600px)', color: '#344804', lineHeight: 0.8 }}>UGC</h2>
+                      <h2 className="font-bold tracking-tighter" style={{ fontSize: 'clamp(120px, 35vw, 600px)', color: '#344804', lineHeight: 1 }}>UGC</h2>
                     </div>
                     <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
                     <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 4, transform: 'scale(0)'}} alt="Hero 4" />
@@ -477,7 +480,7 @@ const testimonials = [
             {/* About Me Accordion (Light) */}
             <section id="sobre-mi" className="theme-section flex flex-col gap-8 w-full" data-theme="light">
               <div className="flex flex-col items-center md:items-start mb-8 md:mb-16 w-full">
-                <h1 className="animated-title text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-[0.85] text-black dark:text-white transition-colors duration-1000">
+                <h1 className="animated-title text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-tight text-black dark:text-white transition-colors duration-1000">
                   Soy Laura,<br />
                   creadora de<br />
                   historias
