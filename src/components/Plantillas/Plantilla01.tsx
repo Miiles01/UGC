@@ -549,7 +549,7 @@ const testimonials = [
                       </div>
                     </div>
                     <div className="real-image zoom-layer flex items-center justify-center bg-[#476500]" style={{zIndex: 2, transform: 'scale(0)'}}>
-                      <h2 className="font-bold tracking-tighter text-center" style={{ fontSize: 'clamp(60px, 15vw, 250px)', color: '#344804', lineHeight: 0.9 }}>Creadora de<br />historias</h2>
+                      <h2 className="font-bold tracking-tighter text-center" style={{ fontSize: 'clamp(60px, 15vw, 250px)', color: '#344804', lineHeight: 0.9 }}>Creadora de<br /><span className="font-welth font-normal italic pr-8 overflow-visible block" style={{ transform: "translateY(-10%)" }}>historias</span></h2>
                     </div>
                     <img src="/hero/3_v2.jpeg" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
                                                         </div>
