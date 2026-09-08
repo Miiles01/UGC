@@ -455,10 +455,10 @@ const testimonials = [
                     <div className="real-image flex flex-col justify-between px-6 md:px-12 lg:px-24 py-8 md:py-4" style={{zIndex: 1, transform: 'scale(1)'}}>
                       <img src="/hero/1.jpeg" className="absolute inset-0 w-full h-full object-cover -z-10" alt="Hero 1 Background" />
                       <div className="w-full flex justify-start pt-24 md:pt-4">
-                        <h2 className="text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Soy</h2>
+                        <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Soy</h2>
                       </div>
                       <div className="w-full flex justify-end pb-8 md:pb-4">
-                        <h2 className="text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Laura</h2>
+                        <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Laura</h2>
                       </div>
                     </div>
                     <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 2, transform: 'scale(0)'}} alt="Hero 2" />
