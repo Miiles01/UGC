@@ -616,34 +616,21 @@ const testimonials = [
                 }
               `}</style>
               
-              <div className="mwg_effect109 w-full">
+              {/* Mobile Normal Carousel */}
+              <div className="md:hidden w-screen -mx-6 px-6 flex gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8">
+                {trayectoriaData.map((s, i) => (
+                  <div key={i} className="flex-shrink-0 w-[85vw] snap-center bg-gray-50 dark:bg-[#171717] rounded-3xl p-6 flex flex-col gap-6 h-full">
+                    <p className="text-3xl font-light text-black dark:text-white">{s.title}</p>
+                    <img className="w-full h-48 object-cover rounded-xl" src={s.img} alt={s.title} />
+                    <p className="text-sm text-black/70 dark:text-white/70 leading-relaxed">{s.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Desktop Accordion GSAP */}
+              <div className="hidden md:block mwg_effect109 w-full">
                 <div className="container-slides">
-                  {[
-                    {
-                      title: "Trayectoria",
-                      smallTitle: "Trayectoria",
-                      text: "Comencé mi carrera digital hace más de 4 años, enfocándome en el estilo de vida y la moda. He colaborado con marcas globales, construyendo una voz única y sólida.",
-                      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80"
-                    },
-                    {
-                      title: "Marcas Top",
-                      smallTitle: "Marcas",
-                      text: "A lo largo de los años he trabajado con firmas como Chanel, Vogue, Adidas y L'Oréal, creando contenido visual y narrativas de alto impacto para sus campañas.",
-                      img: "https://images.unsplash.com/photo-1529139574466-a303027c028c?w=800&q=80"
-                    },
-                    {
-                      title: "Estética Visual",
-                      smallTitle: "Estética",
-                      text: "Mi enfoque se basa en el minimalismo y la autenticidad. Cada pieza está diseñada para transmitir elegancia pura, cuidando la luz y la composición fotográfica.",
-                      img: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80"
-                    },
-                    {
-                      title: "La Comunidad",
-                      smallTitle: "Comunidad",
-                      text: "Más allá de las marcas, conecto con personas reales. Fomento un espacio donde la moda es accesible y el estilo de vida se comparte desde una perspectiva humana.",
-                      img: "https://images.unsplash.com/photo-1512413914564-9273641777b7?w=800&q=80"
-                    }
-                  ].map((s, i) => (
+                  {trayectoriaData.map((s, i) => (
                     <div key={i} className={`slide rounded-2xl ${i === 0 ? 'on' : ''}`}>
                       <div className="content-slide">
                         <p className="text-3xl md:text-4xl font-light">{s.title}</p>
