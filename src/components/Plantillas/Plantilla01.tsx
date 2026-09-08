@@ -867,7 +867,7 @@ const testimonials = [
                 <div className="animate-marquee gap-6 md:gap-8">
                   {/* Render twice for infinite loop effect */}
                   {[...testimonials, ...testimonials].map((t, idx) => (
-                    <div key={idx} className="testimonial-card flex-shrink-0 p-8 md:p-10 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000 h-full justify-between">
+                    <div key={idx} className="testimonial-card flex-shrink-0 p-8 md:p-10 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000 h-[300px] md:h-[320px] justify-between">
                       <p className="text-lg md:text-xl font-light italic leading-relaxed text-black/80 dark:text-white/80 transition-colors duration-1000">
                         "{t.quote}"
                       </p>
