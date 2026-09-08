@@ -329,7 +329,29 @@ const testimonials = [
         clickListeners.push(click)
     })
 
+    let autoplayInterval;
+    
+    const startAutoplay = () => {
+      autoplayInterval = setInterval(() => {
+        const nextIndex = (lastIndexEntered + 1) % slides.length;
+        handleMouseClick(slides[nextIndex], nextIndex);
+      }, 3500);
+    };
+
+    const stopAutoplay = () => {
+      clearInterval(autoplayInterval);
+    };
+
+    container.addEventListener('mouseenter', stopAutoplay);
+    container.addEventListener('mouseleave', startAutoplay);
+
+    // Start autoplay initially
+    startAutoplay();
+
     return () => {
+        clearInterval(autoplayInterval);
+        container.removeEventListener('mouseenter', stopAutoplay);
+        container.removeEventListener('mouseleave', startAutoplay);
         slides.forEach((item, index) => {
             item.removeEventListener('mouseenter', enterListeners[index])
             item.removeEventListener('mouseleave', leaveListeners[index])
