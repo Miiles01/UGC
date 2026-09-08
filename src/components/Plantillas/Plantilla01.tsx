@@ -377,34 +377,61 @@ const testimonials = [
 
     
     
-    // Title animations with SplitText on scroll
-    const titles = gsap.utils.toArray('.animated-title');
-    titles.forEach((title) => {
-      // Split into lines to create the mask wrappers, and chars for the animation
-      const split = new SplitType(title as HTMLElement, { types: 'lines, chars' });
-      
-      // The user's requested clipPath technique applied to each line so it works with multiline text
-      gsap.set(split.lines, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' });
-      gsap.set(split.chars, { yPercent: 100 });
+    // Prevent scrolling while loading
+    document.body.style.overflow = 'hidden';
 
-      gsap.to(split.chars, {
-        scrollTrigger: {
-          trigger: title,
-          start: 'top 85%',
-          once: true
-        },
-        yPercent: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        stagger: { 
-          each: 0.05, 
-          from: "random" 
-        },
-        onComplete: () => {
-          gsap.set(split.lines, { clearProps: 'clipPath' });
-        }
+    function initTitleAnimations() {
+      const titles = gsap.utils.toArray('.animated-title');
+      titles.forEach((title) => {
+        const split = new SplitType(title as HTMLElement, { types: 'lines, chars' });
+        gsap.set(split.lines, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' });
+        gsap.set(split.chars, { yPercent: 100 });
+
+        gsap.to(split.chars, {
+          scrollTrigger: {
+            trigger: title,
+            start: 'top 85%',
+            once: true
+          },
+          yPercent: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          stagger: { 
+            each: 0.05, 
+            from: "random" 
+          },
+          onComplete: () => {
+            gsap.set(split.lines, { clearProps: 'clipPath' });
+          }
+        });
       });
-    });
+      // Trigger ScrollTrigger refresh in case positions changed
+      ScrollTrigger.refresh();
+    }
+
+    const introTl = gsap.timeline();
+    
+    introTl.to('.intro-text', {
+      y: 0,
+      duration: 1,
+      ease: 'power3.out',
+      delay: 0.3
+    })
+    .to('.intro-text', {
+      y: '-100%',
+      duration: 0.8,
+      ease: 'power3.in',
+      delay: 0.6
+    })
+    .to('.intro-curtain', {
+      yPercent: -100,
+      duration: 1.2,
+      ease: 'power4.inOut',
+      onComplete: () => {
+        document.body.style.overflow = '';
+        initTitleAnimations();
+      }
+    }, "-=0.4");
 
     // Paragraph animations with stagger on scroll
     ScrollTrigger.batch('.animated-p', {
@@ -472,6 +499,13 @@ const testimonials = [
 
   return (
     <PortfolioSmoothScroll>
+      {/* Intro Curtain Loader */}
+      <div className="intro-curtain fixed inset-0 z-[10000] bg-white flex items-center justify-center">
+        <div className="overflow-hidden">
+          <p className="intro-text text-sm tracking-[0.3em] font-medium text-black uppercase transform translate-y-full">Portfolio</p>
+        </div>
+      </div>
+
       <div className={`${theme}`}>
         <div className="min-h-screen overflow-x-hidden bg-white dark:bg-[#476500] text-black dark:text-white font-manrope selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
 
