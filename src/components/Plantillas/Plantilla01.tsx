@@ -517,7 +517,7 @@ const testimonials = [
                     <div className="real-image zoom-layer flex items-center justify-center bg-[#476500]" style={{zIndex: 2, transform: 'scale(0)'}}>
                       <h2 className="font-bold tracking-tighter" style={{ fontSize: 'clamp(120px, 35vw, 600px)', color: '#344804', lineHeight: 1 }}>UGC</h2>
                     </div>
-                    <img src="/hero/3.jpeg" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
+                    <img src="/hero/3_v2.jpeg" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
                                                         </div>
             </section>
 
