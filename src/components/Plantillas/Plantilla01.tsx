@@ -742,23 +742,51 @@ const testimonials = [
                       position: relative;
                   }
                   
+                  /* Mobile layout: text above and below */
                   .mwg_effect037 .text-side {
                       font-weight: 300;
-                      font-size: clamp(2rem, 4vw, 3.5rem);
+                      font-size: clamp(2rem, 8vw, 3.5rem);
                       letter-spacing: -0.05em;
                       line-height: 1.1;
                       z-index: 10;
                       position: absolute;
-                      top: 50%;
-                      transform: translateY(-50%);
-                      width: 45%;
-                  }
-                  @media (min-width: 768px) { .mwg_effect037 .text-side { width: 28%; } } @media (min-width: 1024px) { .mwg_effect037 .text-side { width: 22%; } }
-                  .mwg_effect037 .text-side.text-left {
                       left: 0;
+                      right: 0;
+                      text-align: center;
+                      width: 100%;
+                  }
+                  .mwg_effect037 .text-side.text-left {
+                      top: 15%;
                   }
                   .mwg_effect037 .text-side.text-right {
-                      right: 0;
+                      bottom: 15%;
+                  }
+                  
+                  /* Tablet/Desktop layout: text on the sides */
+                  @media (min-width: 768px) { 
+                      .mwg_effect037 .text-side { 
+                          width: 28%; 
+                          top: 50%;
+                          bottom: auto;
+                          transform: translateY(-50%);
+                      } 
+                      .mwg_effect037 .text-side.text-left {
+                          left: 0;
+                          right: auto;
+                          text-align: left;
+                          top: 50%;
+                          transform: translateY(-50%);
+                      }
+                      .mwg_effect037 .text-side.text-right {
+                          right: 0;
+                          left: auto;
+                          text-align: right;
+                          top: 50%;
+                          transform: translateY(-50%);
+                      }
+                  } 
+                  @media (min-width: 1024px) { 
+                      .mwg_effect037 .text-side { width: 22%; } 
                   }
                   
                   .mwg_effect037 .images-stack {
