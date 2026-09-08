@@ -12,6 +12,16 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 
 export const Plantilla01: React.FC = () => {
+const reelMedia = [
+  { type: 'video', src: '/creadora/opt_hf_20260821_195119_6057dc93-0203-4ca7-bef3-89832fe851d1.mp4' },
+  { type: 'image', src: '/creadora/Modificar_imagen_con_ropa_deportiva_202608231856.jpeg' },
+  { type: 'video', src: '/creadora/opt_hf_20260821_160710_4a2253f7-7e93-4f82-a62b-fb16d10f4ffd.mp4' },
+  { type: 'image', src: '/creadora/image.png' },
+  { type: 'video', src: '/creadora/opt_hf_20260824_161107_c3bde3f3-9225-4099-95b5-a93353de0ade.mp4' },
+  { type: 'image', src: '/creadora/Reemplazar_chica_por_modelo_depo…_202608231842.jpeg' },
+  { type: 'video', src: '/creadora/opt_hf_20260821_185821_340d8708-515d-4f2e-af13-6b4f90e5e358.mp4' }
+];
+
 const testimonials = [
   {
     quote: "Laura entendió la visión de nuestra marca desde el primer momento. El contenido superó nuestras expectativas.",
@@ -653,16 +663,13 @@ const testimonials = [
                   <div className="pin-height">
                       <div className="container-pin">
                           
-                          {[
-                            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
-                            "https://images.unsplash.com/photo-1529139574466-a303027c028c?w=600&q=80",
-                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80",
-                            "https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=600&q=80",
-                            "https://images.unsplash.com/photo-1534126511673-b6899657816a?w=600&q=80",
-                            "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80"
-                          ].map((src, i) => (
-                              <div key={i} className="circle">
-                                  <img className="media" src={src} alt={`Reel ${i + 1}`} />
+                          {reelMedia.map((item, i) => (
+                              <div key={i} className="circle bg-neutral-900 rounded-3xl overflow-hidden shadow-2xl">
+                                  {item.type === 'video' ? (
+                                    <video className="media" src={item.src} autoPlay loop muted playsInline />
+                                  ) : (
+                                    <img className="media" src={item.src} alt={`Reel ${i + 1}`} />
+                                  )}
                               </div>
                           ))}
                       </div>
@@ -673,17 +680,13 @@ const testimonials = [
               <div className="block md:hidden w-full flex flex-col gap-8">
                   
                   <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-8 w-screen -mx-6 px-6 no-scrollbar">
-                      {[
-                        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
-                        "https://images.unsplash.com/photo-1529139574466-a303027c028c?w=600&q=80",
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&q=80",
-                        "https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=600&q=80",
-                        "https://images.unsplash.com/photo-1534126511673-b6899657816a?w=600&q=80",
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80"
-                      ].map((src, i) => (
+                      {reelMedia.map((item, i) => (
                           <div key={i} className="snap-center shrink-0 w-[75vw] aspect-[9/16] relative rounded-2xl overflow-hidden bg-neutral-900 transition-colors duration-1000">
-                              <img className="w-full h-full object-cover opacity-80" src={src} alt={`Reel ${i + 1}`} />
-                              <Play className="w-12 h-12 text-white/50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                              {item.type === 'video' ? (
+                                <video className="w-full h-full object-cover" src={item.src} autoPlay loop muted playsInline />
+                              ) : (
+                                <img className="w-full h-full object-cover" src={item.src} alt={`Reel ${i + 1}`} />
+                              )}
                           </div>
                       ))}
                   </div>
