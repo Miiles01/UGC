@@ -17,12 +17,12 @@ export const App: React.FC = () => {
         <BrowserRouter>
           <Toaster richColors position="top-center" />
           <Routes>
-            <Route path="/" element={<CatalogPage />} />
+            <Route path="/catalogo" element={<CatalogPage />} />
             <Route path="/trabajo" element={<WorkPage />} />
             <Route path="/trabajo/:slug" element={<ProjectDetail />} />
             <Route path="/brief/:slug" element={<BriefRunner />} />
             <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/laura" element={<Plantilla01 />} />
+            <Route path="/" element={<Plantilla01 />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
