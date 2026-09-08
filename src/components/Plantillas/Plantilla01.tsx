@@ -508,7 +508,7 @@ const testimonials = [
               <div className="mwg_effect027 flex flex-col items-center md:items-start mb-8 md:mb-16 w-full">
                 <ul className="flex flex-col items-center md:items-start">
                   {["Soy Laura,", "creadora de", "historias"].map((line, lineIdx) => (
-                    <li key={lineIdx} className="flex overflow-hidden text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-[0.85]">
+                    <li key={lineIdx} className="flex overflow-hidden pb-4 md:pb-8 -mb-4 md:-mb-8 pt-2 md:pt-4 -mt-2 md:-mt-4 text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-[0.85]">
                       {line.split('').map((char, charIdx) => (
                         char === ' ' ? 
                         <span key={charIdx} className="w-[0.25em]" /> :
