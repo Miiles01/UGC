@@ -396,18 +396,26 @@ const testimonials = [
     // Title animations with SplitText on scroll
     const titles = gsap.utils.toArray('.animated-title');
     titles.forEach((title) => {
-      const split = new SplitText(title, { type: 'words' });
-      gsap.from(split.words, {
+      // Split into lines to create the mask wrappers, and chars for the animation
+      const split = new SplitText(title, { type: 'lines, chars' });
+      
+      // The user's requested clipPath technique applied to each line so it works with multiline text
+      gsap.set(split.lines, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' });
+      gsap.set(split.chars, { yPercent: 100 });
+
+      gsap.to(split.chars, {
         scrollTrigger: {
           trigger: title,
           start: 'top 85%',
           once: true
         },
-        opacity: 0,
-        y: 25,
-        stagger: 0.06,
-        duration: 0.6,
-        ease: 'power2.out'
+        yPercent: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        stagger: { 
+          each: 0.05, 
+          from: "random" 
+        }
       });
     });
 
