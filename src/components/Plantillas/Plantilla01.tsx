@@ -810,30 +810,48 @@ const testimonials = [
               </div>
             </section>
 
-            {/* Testimonials (Dark) */}
-            <section className="theme-section flex flex-col gap-12" data-theme="dark">
+                        {/* Testimonials Auto Carousel (Dark) */}
+            <section className="theme-section flex flex-col gap-12 overflow-hidden py-10" data-theme="dark">
+              <style>{`
+                @keyframes marquee {
+                  0% { transform: translateX(0%); }
+                  100% { transform: translateX(-50%); }
+                }
+                .animate-marquee {
+                  display: flex;
+                  width: max-content;
+                  animation: marquee 40s linear infinite;
+                }
+                .animate-marquee:hover {
+                  animation-play-state: paused;
+                }
+                .testimonial-card {
+                  width: 85vw;
+                  max-width: 400px;
+                }
+              `}</style>
               <h2 className="animated-title text-3xl md:text-5xl font-light tracking-tight text-center transition-colors duration-1000"
               >
                 Lo que <span className="font-semibold text-4xl md:text-6xl">dicen</span>
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-8 md:p-12 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000">
-                  <p className="animated-p text-lg md:text-xl font-light italic leading-relaxed text-black/80 dark:text-white/80 transition-colors duration-1000">
-                    "Laura entendió la visión de nuestra marca desde el primer momento. El contenido que entregó superó nuestras expectativas y conectó de forma increíble."
-                  </p>
-                  <div>
-                    <p className="font-medium transition-colors duration-1000">Directora de Marketing</p>
-                    <p className="text-sm text-black/50 dark:text-white/50 transition-colors duration-1000">Marca de Belleza</p>
-                  </div>
-                </div>
-                <div className="p-8 md:p-12 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000">
-                  <p className="animated-p text-lg md:text-xl font-light italic leading-relaxed text-black/80 dark:text-white/80 transition-colors duration-1000">
-                    "Su estética minimalista era justo lo que necesitábamos. Muy profesional y creativa durante todo el proceso de producción."
-                  </p>
-                  <div>
-                    <p className="font-medium transition-colors duration-1000">Fundador</p>
-                    <p className="text-sm text-black/50 dark:text-white/50 transition-colors duration-1000">Startup de Moda</p>
-                  </div>
+              
+              <div className="relative w-screen" style={{ left: "50%", right: "50%", marginLeft: "-50vw", marginRight: "-50vw" }}>
+                <div className="animate-marquee gap-6 md:gap-8">
+                  {/* Render twice for infinite loop effect */}
+                  {[...testimonials, ...testimonials].map((t, idx) => (
+                    <div key={idx} className="testimonial-card flex-shrink-0 p-8 md:p-10 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000 h-full justify-between">
+                      <p className="text-lg md:text-xl font-light italic leading-relaxed text-black/80 dark:text-white/80 transition-colors duration-1000">
+                        "{t.quote}"
+                      </p>
+                      <div className="flex items-center gap-4">
+                        <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full object-cover" />
+                        <div>
+                          <p className="font-medium transition-colors duration-1000">{t.name}</p>
+                          <p className="text-sm text-black/50 dark:text-white/50 transition-colors duration-1000">{t.company}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
