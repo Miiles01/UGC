@@ -452,7 +452,15 @@ const testimonials = [
                 `}</style>
                 
                 <div className="container-zoom">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1600&q=80" className="real-image" style={{zIndex: 1, transform: 'scale(1)'}} alt="Hero 1" />
+                    <div className="real-image flex flex-col justify-between p-8 md:p-16 lg:p-24" style={{zIndex: 1, transform: 'scale(1)'}}>
+                      <img src="/hero/1.jpeg" className="absolute inset-0 w-full h-full object-cover -z-10" alt="Hero 1 Background" />
+                      <div className="w-full flex justify-start pt-24 md:pt-12">
+                        <h2 className="text-7xl sm:text-8xl md:text-[120px] lg:text-[160px] font-semibold tracking-tighter text-white drop-shadow-2xl">Soy</h2>
+                      </div>
+                      <div className="w-full flex justify-end pb-8 md:pb-12">
+                        <h2 className="text-7xl sm:text-8xl md:text-[120px] lg:text-[160px] font-semibold tracking-tighter text-white drop-shadow-2xl">Laura</h2>
+                      </div>
+                    </div>
                     <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 2, transform: 'scale(0)'}} alt="Hero 2" />
                     <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
                     <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 4, transform: 'scale(0)'}} alt="Hero 4" />
