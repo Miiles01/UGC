@@ -691,11 +691,7 @@ export const Plantilla01: React.FC = () => {
                       transform: translateY(-50%);
                       width: 45%;
                   }
-                  @media (min-width: 768px) {
-                      .mwg_effect037 .text-side {
-                          width: 30%;
-                      }
-                  }
+                  @media (min-width: 768px) { .mwg_effect037 .text-side { width: 28%; } } @media (min-width: 1024px) { .mwg_effect037 .text-side { width: 22%; } }
                   .mwg_effect037 .text-side.text-left {
                       left: 0;
                   }
@@ -714,12 +710,8 @@ export const Plantilla01: React.FC = () => {
                       z-index: 1;
                   }
                   
-                  @media (min-width: 768px) {
-                      .mwg_effect037 .images-stack {
-                          width: 35vw;
-                          max-width: 380px; /* Reduced from 480px to prevent text collision */
-                      }
-                  }
+                  @media (min-width: 768px) { .mwg_effect037 .images-stack { width: 40vw; max-width: 450px; } }
+                  @media (min-width: 1024px) { .mwg_effect037 .images-stack { width: 50vw; max-width: 560px; } }
                   
                   .mwg_effect037 .hidden-mask {
                       width: 100%;
