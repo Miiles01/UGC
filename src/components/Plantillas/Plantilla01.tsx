@@ -860,7 +860,7 @@ const testimonials = [
               `}</style>
               <h2 className="animated-title text-3xl md:text-5xl font-light tracking-tight text-center transition-colors duration-1000"
               >
-                Lo que <span className="font-semibold text-4xl md:text-6xl">dicen</span>
+                Lo que dicen <span className="font-semibold text-4xl md:text-6xl">sobre mí</span>
               </h2>
               
               <div className="relative w-screen" style={{ left: "50%", right: "50%", marginLeft: "-50vw", marginRight: "-50vw" }}>
