@@ -380,13 +380,17 @@ const testimonials = [
     // Prevent scrolling while loading
     document.body.style.overflow = 'hidden';
 
-    function initTitleAnimations() {
-      const titles = gsap.utils.toArray('.animated-title');
-      titles.forEach((title) => {
-        const split = new SplitType(title as HTMLElement, { types: 'lines, chars' });
-        gsap.set(split.lines, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' });
-        gsap.set(split.chars, { yPercent: 100 });
+    // Setup text hiding instantly so it's not visible while curtain opens
+    const titles = gsap.utils.toArray('.animated-title');
+    const splits = titles.map((title) => {
+      const split = new SplitType(title as HTMLElement, { types: 'lines, chars' });
+      gsap.set(split.lines, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' });
+      gsap.set(split.chars, { yPercent: 100 });
+      return { title, split };
+    });
 
+    function initTitleAnimations() {
+      splits.forEach(({ title, split }) => {
         gsap.to(split.chars, {
           scrollTrigger: {
             trigger: title,
