@@ -11,7 +11,7 @@ import { Observer } from "gsap/Observer";
 
 gsap.registerPlugin(ScrollTrigger, Observer);
 
-export const Plantilla01: React.FC = () => {
+export const Plantilla02: React.FC = () => {
 const reelMedia = [
   { type: 'video', src: '/creadora/opt_hf_20260821_195119_6057dc93-0203-4ca7-bef3-89832fe851d1.mp4' },
   { type: 'image', src: '/creadora/Modificar_imagen_con_ropa_deportiva_202608231856.jpeg' },
