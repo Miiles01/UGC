@@ -825,7 +825,7 @@ const testimonials = [
               
               <div className="pin-height">
                   <div className="container-pin">
-                      <p className="text-side text-left">Dirección<br/><span className="font-semibold">Creativa</span></p>
+                      <p className="text-side text-left">Creando<br/><span className="font-semibold">Conexión</span></p>
                       
                       <div className="images-stack">
                           <div className="hidden-mask"><img className="media-img" src="/creadora/opt_captura.jpeg" alt="Dirección Creativa 1" /></div>
@@ -833,7 +833,7 @@ const testimonials = [
                           <div className="hidden-mask"><img className="media-img" src="/creadora/opt_replace.jpeg" alt="Dirección Creativa 3" /></div>
                       </div>
                       
-                      <p className="text-side text-right">Colección<br/><span className="font-semibold">24-25</span></p>
+                      <p className="text-side text-right">Visión<br/><span className="font-semibold">Auténtica</span></p>
                   </div>
               </div>
             </section>
