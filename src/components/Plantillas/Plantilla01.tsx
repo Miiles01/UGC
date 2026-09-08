@@ -722,7 +722,7 @@ const testimonials = [
             <section className="theme-section mwg_effect037 w-full relative" data-theme="light">
               <style>{`
                   .mwg_effect037 .pin-height {
-                      height: 500vh;
+                      height: 300vh;
                       width: 100%;
                   }
                   .mwg_effect037 .container-pin {
@@ -792,11 +792,9 @@ const testimonials = [
                       <p className="text-side text-left">Dirección<br/><span className="font-semibold">Creativa</span></p>
                       
                       <div className="images-stack">
-                          <div className="hidden-mask"><img className="media-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Galeria 1" /></div>
-                          <div className="hidden-mask"><img className="media-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" alt="Galeria 2" /></div>
-                          <div className="hidden-mask"><img className="media-img" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80" alt="Galeria 3" /></div>
-                          <div className="hidden-mask"><img className="media-img" src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=800&q=80" alt="Galeria 4" /></div>
-                          <div className="hidden-mask"><img className="media-img" src="https://images.unsplash.com/photo-1534126511673-b6899657816a?w=800&q=80" alt="Galeria 5" /></div>
+                          <div className="hidden-mask"><img className="media-img" src="/creadora/opt_captura.jpeg" alt="Dirección Creativa 1" /></div>
+                          <div className="hidden-mask"><img className="media-img" src="/creadora/opt_skin.jpeg" alt="Dirección Creativa 2" /></div>
+                          <div className="hidden-mask"><img className="media-img" src="/creadora/opt_replace.jpeg" alt="Dirección Creativa 3" /></div>
                       </div>
                       
                       <p className="text-side text-right">Colección<br/><span className="font-semibold">24-25</span></p>
