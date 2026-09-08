@@ -499,7 +499,7 @@ const testimonials = [
             <section id="sobre-mi" className="theme-section flex flex-col gap-8 w-full" data-theme="light">
               <div className="mwg_effect027 flex flex-col items-center md:items-start mb-8 md:mb-16 w-full">
                 <ul className="flex flex-col items-center md:items-start">
-                  {["Soy Laura,", "creadora de", "historias."].map((line, lineIdx) => (
+                  {["Soy Laura,", "creadora de", "historias"].map((line, lineIdx) => (
                     <li key={lineIdx} className="flex overflow-hidden text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-[0.85]">
                       {line.split('').map((char, charIdx) => (
                         char === ' ' ? 
