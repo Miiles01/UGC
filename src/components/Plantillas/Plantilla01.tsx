@@ -717,7 +717,7 @@ const testimonials = [
             <section id="clientes" className="theme-section flex flex-col gap-16 items-center text-center text-black" data-theme="light">
               <h2 className="animated-title text-3xl md:text-5xl font-light tracking-tight text-black transition-colors duration-1000"
               >
-                Marcas que <span className="font-semibold text-4xl md:text-6xl">confían</span>
+                Marcas que <span className="font-semibold text-4xl md:text-6xl">confiaron</span>
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 md:gap-16 place-items-center w-full max-w-4xl mx-auto">
                 <img src="/collabs/adidas-13.svg" alt="adidas-13" className="h-16 md:h-24 w-auto object-contain brightness-0 opacity-100 transition-opacity duration-500" />
