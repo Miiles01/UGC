@@ -628,7 +628,7 @@ const testimonials = [
                       {s.icon}
                       <p className="text-3xl font-light">{s.title}</p>
                     </div>
-                    <img className="w-full h-48 object-cover rounded-xl" src={s.img} alt={s.title} />
+                    
                     <p className="text-sm text-black/70 dark:text-white/70 leading-relaxed">{s.text}</p>
                   </div>
                 ))}
@@ -645,7 +645,7 @@ const testimonials = [
                           <p className="text-3xl md:text-4xl font-light">{s.title}</p>
                         </div>
                         <div className="bottom-slide mt-auto">
-                          <img className="w-full h-40 md:h-56 object-cover rounded-xl mb-6" src={s.img} alt={s.title} />
+                          
                           <p className="text-sm md:text-base text-black/70 dark:text-white/70">{s.text}</p>
                         </div>
                       </div>
