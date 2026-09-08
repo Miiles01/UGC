@@ -11,6 +11,56 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, SplitText, Observer);
 
 export const Plantilla01: React.FC = () => {
+const testimonials = [
+  {
+    quote: "Laura entendió la visión de nuestra marca desde el primer momento. El contenido superó nuestras expectativas.",
+    name: "Directora de Marketing",
+    company: "Tech Innovators",
+    avatar: "/avatares/6568484d9a0be86bd9591731c02cae28.jpg"
+  },
+  {
+    quote: "Su capacidad para contar historias a través de la fotografía es única. Cada proyecto es un éxito garantizado.",
+    name: "Fundador",
+    company: "Artisan Coffee Co.",
+    avatar: "/avatares/8b083774fbdc0fde07641da720c9e945.jpg"
+  },
+  {
+    quote: "El nivel de atención al detalle que Laura le puso a nuestra última campaña fue increíble.",
+    name: "Directora de Arte",
+    company: "Fashion Forward",
+    avatar: "/avatares/8b793e055ca3578f3544c6819163e5fd.jpg"
+  },
+  {
+    quote: "Logró capturar la esencia de lo que somos en cada toma. Es una verdadera profesional.",
+    name: "CEO",
+    company: "Eco Beauty",
+    avatar: "/avatares/9104f7ead7d20545851a7cf975fc6118.jpg"
+  },
+  {
+    quote: "Transformó por completo la manera en la que nuestra audiencia nos percibe visualmente.",
+    name: "Brand Manager",
+    company: "Luxe Events",
+    avatar: "/avatares/933339043477b2b9cce10a657079864f.jpg"
+  },
+  {
+    quote: "Una creatividad desbordante y una técnica impecable. Sus fotos hablan por sí solas.",
+    name: "Editor Jefe",
+    company: "Revista Estilo",
+    avatar: "/avatares/b87ca54bea55d5f6bc7b6f27ab4d9494.jpg"
+  },
+  {
+    quote: "Es muy fácil trabajar con ella; siempre llega con las mejores propuestas creativas.",
+    name: "Relaciones Públicas",
+    company: "Agencia Nova",
+    avatar: "/avatares/ced47382ac6a7be818d2328342b12d28.jpg"
+  },
+  {
+    quote: "El contenido que generó tuvo un impacto directo en nuestras ventas. Totalmente recomendada.",
+    name: "Directora Creativa",
+    company: "Urban Wear",
+    avatar: "/avatares/dbc16953dbe4d6b4043e2bca5b0e5f2d.jpg"
+  },
+];
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
