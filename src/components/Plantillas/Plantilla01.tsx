@@ -204,45 +204,6 @@ const testimonials = [
     return () => ctx.revert();
   }, []);
 
-
-  // Rolling Letters Title GSAP Logic (mwg_effect027)
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      if (window.innerWidth >= 768) {
-        // Desktop: Rolling letters, play once
-        gsap.to('.letter-effect', {
-          yPercent: 100,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.mwg_effect027',
-            start: 'top 85%',
-            once: true // Trigger only once, no scrub
-          },
-          stagger: {
-            each: 0.03,
-            from: 'random'
-          }
-        });
-      } else {
-        // Mobile: Simple fade up (disable rolling letters)
-        gsap.from('.mwg_effect027 li', {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: '.mwg_effect027',
-            start: 'top 85%',
-            once: true
-          }
-        });
-      }
-    });
-    return () => ctx.revert();
-  }, []);
-
   // Accordion GSAP Logic
   useEffect(() => {
     const root = document.querySelector('.mwg_effect109')
@@ -505,21 +466,12 @@ const testimonials = [
 
             {/* About Me Accordion (Light) */}
             <section id="sobre-mi" className="theme-section flex flex-col gap-8 w-full" data-theme="light">
-              <div className="mwg_effect027 flex flex-col items-center md:items-start mb-8 md:mb-16 w-full">
-                <ul className="flex flex-col items-center md:items-start">
-                  {["Soy Laura,", "creadora de", "historias"].map((line, lineIdx) => (
-                    <li key={lineIdx} className="flex overflow-hidden pb-4 md:pb-8 -mb-4 md:-mb-8 pt-2 md:pt-4 -mt-2 md:-mt-4 text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-[0.85]">
-                      {line.split('').map((char, charIdx) => (
-                        char === ' ' ? 
-                        <span key={charIdx} className="w-[0.25em]" /> :
-                        <span key={charIdx} className="letter-effect relative inline-block text-black dark:text-white transition-colors duration-1000">
-                          <span>{char}</span>
-                          <span className="absolute bottom-full left-0">{char}</span>
-                        </span>
-                      ))}
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex flex-col items-center md:items-start mb-8 md:mb-16 w-full">
+                <h1 className="animated-title text-5xl sm:text-6xl md:text-[90px] lg:text-[130px] font-semibold tracking-tighter leading-[0.85] text-black dark:text-white transition-colors duration-1000">
+                  Soy Laura,<br />
+                  creadora de<br />
+                  historias
+                </h1>
               </div>
               
               <style>{`
