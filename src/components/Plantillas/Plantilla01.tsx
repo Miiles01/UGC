@@ -461,7 +461,9 @@ const testimonials = [
                         <h2 className="animated-title text-[90px] sm:text-[130px] md:text-[180px] lg:text-[260px] leading-none font-bold tracking-tighter text-white">Laura</h2>
                       </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 2, transform: 'scale(0)'}} alt="Hero 2" />
+                    <div className="real-image zoom-layer flex items-center justify-center bg-[#476500]" style={{zIndex: 2, transform: 'scale(0)'}}>
+                      <h2 className="font-bold tracking-tighter" style={{ fontSize: 'clamp(120px, 35vw, 600px)', color: '#344804', lineHeight: 0.8 }}>UGC</h2>
+                    </div>
                     <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 3, transform: 'scale(0)'}} alt="Hero 3" />
                     <img src="https://images.unsplash.com/photo-1509319117193-57bab727e09d?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 4, transform: 'scale(0)'}} alt="Hero 4" />
                     <img src="https://images.unsplash.com/photo-1534126511673-b6899657816a?w=1600&q=80" className="real-image zoom-layer" style={{zIndex: 5, transform: 'scale(0)'}} alt="Hero 5" />
