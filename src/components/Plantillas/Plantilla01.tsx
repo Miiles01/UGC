@@ -868,7 +868,7 @@ const testimonials = [
                   max-width: 400px;
                 }
               `}</style>
-              <h2 className="animated-title text-3xl md:text-5xl font-light tracking-tight text-center transition-colors duration-1000"
+              <h2 className="animated-title text-white text-3xl md:text-5xl font-light tracking-tight text-center transition-colors duration-1000"
               >
                 Lo que dicen <span className="font-semibold text-4xl md:text-6xl">sobre mí</span>
               </h2>
