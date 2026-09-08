@@ -623,7 +623,7 @@ const testimonials = [
               
               {/* Unified Section Title */}
               <div className="w-full text-center pb-12 md:pb-16 pt-8 md:pt-16">
-                  <h2 className="animated-title text-4xl md:text-6xl lg:text-7xl font-light tracking-tight transition-colors duration-1000">
+                  <h2 className="animated-title text-white text-4xl md:text-6xl lg:text-7xl font-light tracking-tight transition-colors duration-1000">
                       Contenido en<br />
                       <span className="font-semibold text-5xl md:text-7xl lg:text-8xl mt-1 md:mt-2 block">movimiento</span>
                   </h2>
