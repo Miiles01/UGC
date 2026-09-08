@@ -206,6 +206,7 @@ const testimonials = [
 
   // Accordion GSAP Logic
   useEffect(() => {
+    if (window.innerWidth < 768) return; // Disable GSAP accordion on mobile
     const root = document.querySelector('.mwg_effect109')
     if (!root) return
     const container = root.querySelector('.container-slides')
@@ -419,6 +420,33 @@ const testimonials = [
     { name: 'Clientes', id: 'clientes' },
     { name: 'Contacto', id: 'contacto' },
   ];
+
+  const trayectoriaData = [
+                    {
+                      title: "Trayectoria",
+                      smallTitle: "Trayectoria",
+                      text: "Comencé mi carrera digital hace más de 4 años, enfocándome en el estilo de vida y la moda. He colaborado con marcas globales, construyendo una voz única y sólida.",
+                      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80"
+                    },
+                    {
+                      title: "Marcas Top",
+                      smallTitle: "Marcas",
+                      text: "A lo largo de los años he trabajado con firmas como Chanel, Vogue, Adidas y L'Oréal, creando contenido visual y narrativas de alto impacto para sus campañas.",
+                      img: "https://images.unsplash.com/photo-1529139574466-a303027c028c?w=800&q=80"
+                    },
+                    {
+                      title: "Estética Visual",
+                      smallTitle: "Estética",
+                      text: "Mi enfoque se basa en el minimalismo y la autenticidad. Cada pieza está diseñada para transmitir elegancia pura, cuidando la luz y la composición fotográfica.",
+                      img: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80"
+                    },
+                    {
+                      title: "La Comunidad",
+                      smallTitle: "Comunidad",
+                      text: "Más allá de las marcas, conecto con personas reales. Fomento un espacio donde la moda es accesible y el estilo de vida se comparte desde una perspectiva humana.",
+                      img: "https://images.unsplash.com/photo-1512413914564-9273641777b7?w=800&q=80"
+                    }
+                  ];
 
   return (
     <PortfolioSmoothScroll>
