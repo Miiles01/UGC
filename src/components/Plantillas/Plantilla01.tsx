@@ -459,7 +459,7 @@ const testimonials = [
   return (
     <PortfolioSmoothScroll>
       <div className={`${theme}`}>
-        <div className="min-h-screen bg-white dark:bg-[#08080a] text-black dark:text-white font-dmsans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
+        <div className="min-h-screen bg-white dark:bg-[#476500] text-black dark:text-white font-dmsans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black transition-colors duration-1000 ease-in-out relative">
 
                       {/* Hero GSAP Effect 050 (Finite Scroll Zoom) */}
             <section className="theme-section mwg_effect050 w-full relative" data-theme="light">
@@ -468,7 +468,7 @@ const testimonials = [
                       width: 100vw;
                       position: relative;
                       height: 100vh;
-                      background: #000;
+                      background: #476500;
                   }
                   .mwg_effect050 .container-zoom {
                       position: relative;
@@ -672,7 +672,7 @@ const testimonials = [
                       <div className="container-pin">
                           
                           {reelMedia.map((item, i) => (
-                              <div key={i} className="circle bg-neutral-900 rounded-3xl overflow-hidden shadow-2xl">
+                              <div key={i} className="circle bg-black/20 rounded-3xl overflow-hidden shadow-2xl">
                                   {item.type === 'video' ? (
                                     <video className="media" src={item.src} autoPlay loop muted playsInline />
                                   ) : (
@@ -689,7 +689,7 @@ const testimonials = [
                   
                   <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-8 w-screen -mx-6 px-6 no-scrollbar">
                       {reelMedia.map((item, i) => (
-                          <div key={i} className="snap-center shrink-0 w-[75vw] aspect-[9/16] relative rounded-2xl overflow-hidden bg-neutral-900 transition-colors duration-1000">
+                          <div key={i} className="snap-center shrink-0 w-[75vw] aspect-[9/16] relative rounded-2xl overflow-hidden bg-black/20 transition-colors duration-1000">
                               {item.type === 'video' ? (
                                 <video className="w-full h-full object-cover" src={item.src} autoPlay loop muted playsInline />
                               ) : (
@@ -817,7 +817,7 @@ const testimonials = [
                 Lo que <span className="font-semibold text-4xl md:text-6xl">dicen</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-8 md:p-12 bg-gray-50 dark:bg-neutral-900/50 rounded-3xl flex flex-col gap-6 transition-colors duration-1000">
+                <div className="p-8 md:p-12 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000">
                   <p className="animated-p text-lg md:text-xl font-light italic leading-relaxed text-black/80 dark:text-white/80 transition-colors duration-1000">
                     "Laura entendió la visión de nuestra marca desde el primer momento. El contenido que entregó superó nuestras expectativas y conectó de forma increíble."
                   </p>
@@ -826,7 +826,7 @@ const testimonials = [
                     <p className="text-sm text-black/50 dark:text-white/50 transition-colors duration-1000">Marca de Belleza</p>
                   </div>
                 </div>
-                <div className="p-8 md:p-12 bg-gray-50 dark:bg-neutral-900/50 rounded-3xl flex flex-col gap-6 transition-colors duration-1000">
+                <div className="p-8 md:p-12 bg-gray-50 dark:bg-black/20 rounded-3xl flex flex-col gap-6 transition-colors duration-1000">
                   <p className="animated-p text-lg md:text-xl font-light italic leading-relaxed text-black/80 dark:text-white/80 transition-colors duration-1000">
                     "Su estética minimalista era justo lo que necesitábamos. Muy profesional y creativa durante todo el proceso de producción."
                   </p>
