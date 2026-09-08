@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Menu, Instagram, Twitter, Mail, Play, X } from 'lucide-react';
+import { Menu, Instagram, Twitter, Mail, Play, X, Compass, Star, Camera, Users } from 'lucide-react';
 import { FacebookIcon } from '../Icons/FacebookIcon';
 import { Tiktok } from '../Icons/Tiktok';
 import { PortfolioSmoothScroll } from '../Portfolio/PortfolioSmoothScroll';
@@ -475,31 +475,35 @@ const testimonials = [
   ];
 
   const trayectoriaData = [
-                    {
-                      title: "Trayectoria",
-                      smallTitle: "Trayectoria",
-                      text: "Comencé mi carrera digital hace más de 4 años, enfocándome en el estilo de vida y la moda. He colaborado con marcas globales, construyendo una voz única y sólida.",
-                      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80"
-                    },
-                    {
-                      title: "Marcas Top",
-                      smallTitle: "Marcas",
-                      text: "A lo largo de los años he trabajado con firmas como Chanel, Vogue, Adidas y L'Oréal, creando contenido visual y narrativas de alto impacto para sus campañas.",
-                      img: "https://images.unsplash.com/photo-1529139574466-a303027c028c?w=800&q=80"
-                    },
-                    {
-                      title: "Estética Visual",
-                      smallTitle: "Estética",
-                      text: "Mi enfoque se basa en el minimalismo y la autenticidad. Cada pieza está diseñada para transmitir elegancia pura, cuidando la luz y la composición fotográfica.",
-                      img: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80"
-                    },
-                    {
-                      title: "La Comunidad",
-                      smallTitle: "Comunidad",
-                      text: "Más allá de las marcas, conecto con personas reales. Fomento un espacio donde la moda es accesible y el estilo de vida se comparte desde una perspectiva humana.",
-                      img: "https://images.unsplash.com/photo-1512413914564-9273641777b7?w=800&q=80"
-                    }
-                  ];
+    {
+      icon: <Compass strokeWidth={1} size={32} className="opacity-80" />,
+      title: "Trayectoria",
+      smallTitle: "Trayectoria",
+      text: "Comencé mi viaje digital hace más de 4 años, enfocándome en redefinir el estilo de vida y la moda. Desde mis primeros pasos, mi objetivo ha sido huir de lo genérico, construyendo una voz única, sólida y auténtica que resuene de verdad con la audiencia.",
+      img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80"
+    },
+    {
+      icon: <Star strokeWidth={1} size={32} className="opacity-80" />,
+      title: "Marcas Top",
+      smallTitle: "Marcas",
+      text: "La confianza es mi mejor credencial. A lo largo de los años he liderado colaboraciones estratégicas con firmas de élite como Chanel, Vogue, Adidas y L'Oréal, diseñando contenido visual de alto impacto que se siente orgánico y menos como un anuncio tradicional.",
+      img: "https://images.unsplash.com/photo-1529139574466-a303027c028c?w=800&q=80"
+    },
+    {
+      icon: <Camera strokeWidth={1} size={32} className="opacity-80" />,
+      title: "Estética Visual",
+      smallTitle: "Estética",
+      text: "Mi dirección de arte se sostiene sobre el minimalismo y la autenticidad pura. Cada fotografía y video está diseñado meticulosamente para transmitir elegancia, cuidando obsesivamente la luz natural, la paleta de colores y la composición cinematográfica.",
+      img: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80"
+    },
+    {
+      icon: <Users strokeWidth={1} size={32} className="opacity-80" />,
+      title: "La Comunidad",
+      smallTitle: "Comunidad",
+      text: "Más allá de las métricas y los likes, priorizo conectar con personas reales. Fomento un espacio digital seguro e inspirador donde la moda es accesible, el crecimiento es mutuo y el estilo de vida se comparte desde una perspectiva profundamente humana.",
+      img: "https://images.unsplash.com/photo-1512413914564-9273641777b7?w=800&q=80"
+    }
+  ];
 
   return (
     <PortfolioSmoothScroll>
@@ -620,7 +624,10 @@ const testimonials = [
               <div className="md:hidden w-screen -mx-6 px-6 flex gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8">
                 {trayectoriaData.map((s, i) => (
                   <div key={i} className="flex-shrink-0 w-[85vw] snap-center bg-gray-50 dark:bg-[#171717] rounded-3xl p-6 flex flex-col gap-6 h-full">
-                    <p className="text-3xl font-light text-black dark:text-white">{s.title}</p>
+                    <div className="flex items-center gap-3 text-black dark:text-white">
+                      {s.icon}
+                      <p className="text-3xl font-light">{s.title}</p>
+                    </div>
                     <img className="w-full h-48 object-cover rounded-xl" src={s.img} alt={s.title} />
                     <p className="text-sm text-black/70 dark:text-white/70 leading-relaxed">{s.text}</p>
                   </div>
@@ -633,7 +640,10 @@ const testimonials = [
                   {trayectoriaData.map((s, i) => (
                     <div key={i} className={`slide rounded-2xl ${i === 0 ? 'on' : ''}`}>
                       <div className="content-slide">
-                        <p className="text-3xl md:text-4xl font-light">{s.title}</p>
+                        <div className="flex items-center gap-3 md:gap-4 text-black dark:text-white">
+                          {s.icon}
+                          <p className="text-3xl md:text-4xl font-light">{s.title}</p>
+                        </div>
                         <div className="bottom-slide mt-auto">
                           <img className="w-full h-40 md:h-56 object-cover rounded-xl mb-6" src={s.img} alt={s.title} />
                           <p className="text-sm md:text-base text-black/70 dark:text-white/70">{s.text}</p>
